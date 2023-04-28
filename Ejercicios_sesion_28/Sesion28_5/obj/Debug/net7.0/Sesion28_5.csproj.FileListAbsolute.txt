@@ -1,0 +1,15 @@
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\bin\Debug\net7.0\Sesion28_5.exe
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\bin\Debug\net7.0\Sesion28_5.deps.json
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\bin\Debug\net7.0\Sesion28_5.runtimeconfig.json
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\bin\Debug\net7.0\Sesion28_5.dll
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\bin\Debug\net7.0\Sesion28_5.pdb
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\obj\Debug\net7.0\Sesion28_5.csproj.AssemblyReference.cache
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\obj\Debug\net7.0\Sesion28_5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\obj\Debug\net7.0\Sesion28_5.AssemblyInfoInputs.cache
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\obj\Debug\net7.0\Sesion28_5.AssemblyInfo.cs
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\obj\Debug\net7.0\Sesion28_5.csproj.CoreCompileInputs.cache
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\obj\Debug\net7.0\Sesion28_5.dll
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\obj\Debug\net7.0\refint\Sesion28_5.dll
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\obj\Debug\net7.0\Sesion28_5.pdb
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\obj\Debug\net7.0\Sesion28_5.genruntimeconfig.cache
+C:\Users\olive\OneDrive\Escritorio\Trainee\traineeejercicios\Ejercicios_sesion_28\Sesion28_5\obj\Debug\net7.0\ref\Sesion28_5.dll
