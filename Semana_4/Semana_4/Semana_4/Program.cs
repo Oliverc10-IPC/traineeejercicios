@@ -11,8 +11,10 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
             Biblioteca biblioteca = new Biblioteca();
             Libro libro1 = new Libro("Pinoccio", "Carlo Collodi");
             Revista revista1 = new Revista("Time","2da");
+            libro1.Prestar();
             biblioteca.AgregarMaterial(libro1);
             biblioteca.AgregarMaterial(revista1);
+            biblioteca.PrestarMaterial(libro1);
             List<Material> opciones = biblioteca.BuscarPorTitulos("Pino");
             foreach (Material mat in opciones) { 
                     WriteLine(mat.nombre); 
@@ -21,15 +23,14 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
             
         }
     }
-
+    //Clase Abstrata Material
     public abstract class Material
     {
         public String nombre { set; get; }
         public bool disponible { set; get; }
 
-
-
     }
+    //Clase Libro heredando de Material
     public class Libro : Material
     {
 
@@ -54,14 +55,12 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
 
         }
     }
+    //Clase Revista heredando de Material
     public class Revista : Material
     {
 
         String Edicion { set; get; }
-
-
-       
-
+           
         public Revista(String nombre, String Edicion)
         {
             this.nombre = nombre;
@@ -76,6 +75,7 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
         }
 
     }
+    //Interfaz Biblioteca
     interface IBiblioteca
     {
 
@@ -86,6 +86,7 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
 
 
     }
+    //Clase Biblioteca implementando la interfaz biblioteca
     public class Biblioteca : IBiblioteca
     {
         List<Material> lbiblioteca { set; get; }
@@ -123,6 +124,7 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
         {
             if (material.disponible)
             {
+                WriteLine("Libro disponible se puede prestar");
                 material.disponible = false;
             }
             else {
