@@ -1,6 +1,4 @@
-﻿
-using System.Linq;
-using static System.Console;
+﻿using static System.Console;
 
 namespace Biblioteca // Note: actual namespace depends on the project name.
 {
@@ -9,18 +7,20 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             Biblioteca biblioteca = new Biblioteca();
-            Libro libro1 = new Libro("Pinoccio", "Carlo Collodi");
-            Revista revista1 = new Revista("Time","2da");
-            libro1.Prestar();
+            Material libro1 = new Libro("Pinoccio", "Carlo Collodi");
+            Material revista1 = new Revista("Time", "2da");
+
             biblioteca.AgregarMaterial(libro1);
             biblioteca.AgregarMaterial(revista1);
             biblioteca.PrestarMaterial(libro1);
+            biblioteca.DevolverMaterial(libro1);
             List<Material> opciones = biblioteca.BuscarPorTitulos("Pino");
-            foreach (Material mat in opciones) { 
-                    WriteLine(mat.nombre); 
+            foreach (Material mat in opciones)
+            {
+                WriteLine(mat.nombre);
             }
-            
-            
+
+
         }
     }
     //Clase Abstrata Material
@@ -36,7 +36,7 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
 
         String Autor { set; get; }
 
-              
+
         public Libro(String nombre, String Autor)
         {
             this.nombre = nombre;
@@ -60,7 +60,7 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
     {
 
         String Edicion { set; get; }
-           
+
         public Revista(String nombre, String Edicion)
         {
             this.nombre = nombre;
@@ -91,33 +91,48 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
     {
         List<Material> lbiblioteca { set; get; }
 
-        public Biblioteca() { 
-        lbiblioteca = new List<Material>();  
-        
+        public Biblioteca()
+        {
+            lbiblioteca = new List<Material>();
+
         }
         public void AgregarMaterial(Material material)
         {
-              
-            lbiblioteca.Add(material);   
-            
+
+            lbiblioteca.Add(material);
+
         }
 
         public List<Material> BuscarPorTitulos(string titulo)
         {
-            List <Material> opcionesPosibles = new List<Material>();    
+            List<Material> opcionesPosibles = new List<Material>();
             foreach (Material mat in lbiblioteca)
             {
-                if (mat.nombre.Contains(titulo)) { 
+                if (mat.nombre.Contains(titulo))
+                {
                     opcionesPosibles.Add(mat);
                 }
             }
             return opcionesPosibles;
-            
+
         }
 
         public void DevolverMaterial(Material material)
         {
-            material.disponible = true;
+            if (material.GetType() == typeof(Libro))
+            {
+                material = (Libro)material;
+                WriteLine("Se devuelve el libro");
+                material.disponible = true;
+
+
+            }
+            else if (material.GetType() == typeof(Revista))
+            {
+                WriteLine("Se devuelve la revista");
+                material.disponible = true;
+            }
+
         }
 
         public void PrestarMaterial(Material material)
@@ -127,9 +142,10 @@ namespace Biblioteca // Note: actual namespace depends on the project name.
                 WriteLine("Libro disponible se puede prestar");
                 material.disponible = false;
             }
-            else {
+            else
+            {
                 WriteLine("El libro no se encuentra disponible");
-                
+
             }
         }
     }
